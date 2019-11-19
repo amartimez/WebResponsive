@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InboundCycle</title>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+
+    hr{
+      width: 100%;
+    }
+    input{
+      width:220px; 
+      height: 20px;
+      margin: 7px;
+      padding: 5px;
+      border: hidden;
+    }
+  
+    h3{
+      text-transform: uppercase;
+      color: orangered;
+      margin: 10px;
+      padding: 15px 5px 5px 5px;
+      text-align: center;
+      font-size: 15px;  
+    }
+
+    button{
+      background-color: orangered;
+      color: white;
+      width: 250px;
+      height: 40px;
+      font-size: 20px;
+      margin-left: 5px;
+      border-style: none;
+      margin-top: 5px;
+    } 
+
+    fieldset{
+      margin: 0 auto;
+      border: hidden;
+    }
+   
+
+    .emphasizes{
+      text-transform: uppercase;
+      color: orangered;
+      margin-top: 40px;
+      padding: 15px 5px 5px 5px;
+      text-align: center;
+      font-size: 15px;  
+    }
+    #legal-checkbox{
+      display: block;
+      padding-left: 17px;
+      padding-top: 5px;
+      padding-bottom: 20px;
+    }
+    #check {
+      width: 13px;
+      height: 13px;
+      padding: 0;
+      margin:0;
+      vertical-align: bottom;
+      position: relative;
+      
+    }
+    
+    section{
+      width: 50%;
+      padding: 20px;
+      margin-top: 140px;
+      margin-left: 10%;
+      box-sizing: border-box;
+      position: relative;
+      padding-top: 150px;
+    }
+    
+    section h1{
+      margin-right: 35%;
+      color: orangered;
+      margin-bottom: 50px;
+      font-size: 28px;
+    }
+
+    section h2{
+      margin-right: 35%;
+      color: lightgray;
+      float: left;
+      margin-bottom: 20px;
+    }
+
+    section img{
+      width: 33%;
+      padding-left: 100px;
+      height: auto;
+      top:10%;
+      left: 50%;
+      position: absolute;
+    }
+
+    aside{
+      width: 35%;
+      float: left;
+      max-width: 300px;
+      height: 410px;
+      top: 27%;
+      margin-left: 63%;
+      border-style: none;
+      padding: 20px;
+      background-color: rgb(236, 234, 234);
+      box-sizing: border-box;
+      position: absolute
+    }
+   
+    .logotype{
+      float: left;
+      margin-top: 20px;
+      margin-left: 10%;
+      position: relative;
+    }
+
+    .main-container{
+      width: 100%;
+      max-width: 1500px;
+      height: 1100px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+      box-sizing: border-box;
+    }
+    .separator-image {
+      width: 100%;
+      height: 150px;
+      margin-top:80px;
+      background-image: url(./img/separator-image.jpg);
+      background-position: center center;
+      position: absolute;
+    }
+
+   .social-icons li {
+      display: inline;
+      font-size: 1.0em;
+      padding: 0.2em;
+      list-style-type:none
+      }
+     
+   .footer-frame{
+      width: 100%;
+      height: 150px;
+      background-color: rgb(66, 65, 65);
+      margin-top: 60px;
+      margin-left: 0%;
+      box-sizing: border-box;
+      }
+   .caption{
+      position: relative;
+      margin:7% auto;
+      padding:30px 50px;
+      background-color:whitesmoke;
+      color:black;
+      border-radius: 8px;
+      width:30%;
+      }
+   #social-media{
+      float: right;
+      padding-right: 18%;
+    }
+    
+
+   #popup {
+      visibility: hidden;
+      opacity: 0;
+      margin-top: -300px;
+     }
+   #popup:target {
+      visibility:visible;
+      opacity: 1;
+      background-color: rgba(0,0,0,0.8);
+      position: fixed;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      margin:0;
+      z-index: 999;
+      transition:all 1s;
+      }
+    #cerrar{
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #F00;
+      transition: all 200ms;
+     }
+
+  @media screen and (max-width: 1760px){
+    .main-container{
+    height: auto;
+    width: 100%;
+    min-width: 400px;
+  }
+
+  section img{
+    min-width: 240px;
+    max-width: 400px;
+    padding-left: 10%
+  }
+  aside{
+    width: 100%;
+    min-width: 300px;
+    max-width: 300px;
+    left: 0;
+    margin-left: 10%;
+    margin-top: 5%;
+    position: relative;
+    
+    }
+
+  .footer-frame{
+      position: relative;
+      margin-top: 480px;
+    }
+  }
+
+@media screen and (max-width: 800px){
+
+  .logotype{
+    width: 60%;
+    max-width: 200px;
+    min-width: 200px;
+    margin-left: 5%;
+  }
+
+  section{
+    width: 80%;
+    min-width: 300px;
+    max-width: 400px;
+    margin-left: 1%;
+  }
+  section img{
+    padding-left: 2%
+  }
+
+aside input{
+  max-width: 300px;
+}
+}
+
+  </style> 
+</head>
+<body>
+  <!-- Header -->
+  <div class="main-container"> 
+  <header>
+      <hr  style= "border-color: orangered;"noshade="noshade" size="2"/>
+    <div id="logotype">
+         <img src="img/inboundcycle-logo.png" class="logotype" alt="InboundCycle">
+     </div>
+    <!-- Logotype -->
+    <div id="social-media">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/InboundCycle" target="_blank" title="Visita nuestra cuenta de Facebook de InboundCycle">
+              <i class="fa fa-facebook-square" style="color:orangered;"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/inboundcycle" target="_blank" title="Visitar el Twitter de InboundCycle">
+              <i class="fa fa-twitter-square" style="color:orangered;"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/2387654" target="_blank" title="Visitar el LinkedIn de InboundCycle">
+              <i class="fa fa-linkedin-square" style="color:orangered;"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+  </header>
+  <!-- Separator Image -->
+  <div class="separator-image"></div>
+  <!-- Container -->
+  <div class="wrapper">
+    <section>
+      <!-- Ebook -->
+          <img src="img/ebook.png" class="ebook" alt="E-book genérico de InboundCycle">
+      <!-- Titles -->
+      <h1>Lorem ipsum dolor sit amet elit consectetur adipiscing eu ipsum  porttitor ligula donec</h1>
+      <h2>Lorem ipsum dolor sit amet consectetur adipiscing elit eu porttitor ligula donec</h2>
+      <!-- Body text -->
+      <p>Duis blandit tempor facilisis. Curabitur ipsum turpis, <a href="#" title="Enlace de prueba" style="color:orangered">venenatis</a> et massa id, congue dignissim nibh. Praesent vitae justo vel metus faucibus vehicula. Donec vitae semper eros, et viverra leo. Quisque maximus semper mi, sit amet vehicula quam ultricies eu. Nullam euismod orci sed erat blandit vulputate nec vitae arcu. Integer nec imperdiet sem. Nullam a nibh rhoncus, tincidunt arcu eu, porta erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae semper eros, et viverra leo.</p>      <!-- Emphasizes -->
+      <div class="emphasizes">
+        <b>Rellena el formulario para descargar la guía <i class="fa fa-long-arrow-right"></b></i>
+      </div>
+    </section>
+    <!-- Aside -->
+    <aside>
+      <!-- Download form -->
+      <form action="post">
+        <h3>Descargar e-book gratis</h3>
+        <fieldset>
+          <input type="text" name="name" placeholder="Nombre" style="width:220px; height: 20px;">
+          <input type="text" name="surname" placeholder="Apellidos" style="width:220px; height: 20px;">
+          <input type="email" name="email"  placeholder="Email" style="width:220px; height: 20px;">
+        </fieldset>
+        <div id="legal-checkbox">
+          <label><input type="checkbox" name="legal" id="check" /> Acepto la <a href="#" title="Lea nuestra política de privacidad" style="color:orangered">política de privacidad</a>*</label>
+          <label><input type="checkbox" name="subscription"id="check"/> Suscríbeme al blog</label>
+        </div> 
+        <button type="submit" id="button-form"><a href="#popup" class="popup" style="color: floralwhite; text-decoration: none;" >Descargar</a> </button>
+      </form>
+    </aside>
+  </div>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-frame">
+      <!-- Logotype -->
+      <img src="img/inboundcycle-logo-small.png" class="logotype" alt="InboundCycle"style="padding-top:30px;">
+      <!-- Legal menu -->
+      <nav>
+          <ul class="social-icons" style="color: floralwhite; padding-top: 50px; margin-left: 55%;" >
+            <!-- Copyright -->
+              <li ><small>InboundCycle © 2015  |  </small></li>
+              <!-- Legal menu -->
+              <li ><a title="Lea nuestra política de privacidad"> <small> Política de Privacidad | </small></a></li>
+              <li><a  title="Lea el aviso legal"> <small> Aviso Legal </small></a></li>
+            </ul>
+      </nav>
+    </div>
+  </footer>
+  <!-- Pop-up -->
+  <div id="popup">
+      <div class="caption">
+          <h2 style="text-align: center;">Registro finalizado!</h2>
+          <hr style= "border-color: orangered;" noshade="noshade" size="0.5">
+        <p style="text-align: center;">¡Muchas gracias!</p>
+        <a id="cerrar" href="#">&times;</a>
+      </div>
+    </div>
+</div>
+</body>
